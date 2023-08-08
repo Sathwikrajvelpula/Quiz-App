@@ -52,7 +52,7 @@ public class quizapplication extends AppCompatActivity implements View.OnClickLi
     }
 
     private void starttm() {
-        new CountDownTimer(60000, 1000) {
+        new CountDownTimer(120000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 text3.setText("Time : " + millisUntilFinished / 1000);
@@ -69,10 +69,10 @@ public class quizapplication extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onClick(View view) {
 
-        bt1.setBackgroundColor(Color.rgb(41,182,246));
-        bt2.setBackgroundColor(Color.rgb(41,182,246));
-        bt3.setBackgroundColor(Color.rgb(41,182,246));
-        bt4.setBackgroundColor(Color.rgb(41,182,246));
+        bt1.setBackgroundColor(Color.rgb(255,112,67));
+        bt2.setBackgroundColor(Color.rgb(255,112,67));
+        bt3.setBackgroundColor(Color.rgb(255,112,67));
+        bt4.setBackgroundColor(Color.rgb(255,112,67));
         Button clcbtn = (Button) view;
         if (clcbtn.getId()==R.id.subans){
             if(selans.equals(queandans.ans[presentque_ind])){
@@ -82,7 +82,7 @@ public class quizapplication extends AppCompatActivity implements View.OnClickLi
             checkans();
         }else{
             selans = clcbtn.getText().toString();
-            clcbtn.setBackgroundColor(Color.rgb(49,112,143));
+            clcbtn.setBackgroundColor(Color.rgb(0,0,0));
 
         }
 
@@ -111,7 +111,7 @@ public class quizapplication extends AppCompatActivity implements View.OnClickLi
             status = "Passed :)";
         }
         else{
-            status="Failed :(";
+            status="Better Luck next time :(";
         }
 
         new AlertDialog.Builder(this)

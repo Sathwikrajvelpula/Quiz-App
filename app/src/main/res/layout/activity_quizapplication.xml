@@ -5,8 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".quizapplication"
-    android:background="@drawable/bg4"
+    android:background="@drawable/orangeline"
     android:padding="25dp">
+
 
     <TextView
         android:id="@+id/textView1"
@@ -14,16 +15,14 @@
         android:layout_height="31dp"
         android:text="TextView"
         android:textAlignment="center"
-        android:textColor="#0B0808"
+        android:textColor="#FF7043"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.022" />
-
-
 
     <LinearLayout
         android:id="@+id/linearLayoutopn"
@@ -31,9 +30,10 @@
         android:layout_height="250dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
-        android:layout_marginEnd="1dp"
+        android:layout_marginEnd="5dp"
         android:layout_marginBottom="1dp"
         android:orientation="vertical"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,63 +42,82 @@
 
         <Button
             android:id="@+id/opn1"
-            android:layout_width="325dp"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
-            android:backgroundTint="#29B6F6"
+            android:backgroundTint="#FF7043"
             android:text="Button"
-            android:translationX="15dp"
+            android:textColor="#FFFFFF"
             app:cornerRadius="25dp" />
+
 
         <Button
             android:id="@+id/opn2"
-            android:layout_width="325dp"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
-            android:backgroundTint="#29B6F6"
+            android:backgroundTint="#FF7043"
             android:text="Button"
-            android:translationX="15dp"
+            android:textColor="#FFFFFF"
             app:cornerRadius="25dp" />
 
         <Button
             android:id="@+id/opn3"
-            android:layout_width="325dp"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
-            android:backgroundTint="#29B6F6"
+            android:backgroundTint="#FF7043"
             android:text="Button"
-            android:translationX="15dp"
+            android:textColor="#FFFFFF"
             app:cornerRadius="25dp" />
 
         <Button
             android:id="@+id/opn4"
-            android:layout_width="325dp"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
-            android:backgroundTint="#29B6F6"
+            android:backgroundTint="#FF7043"
             android:text="Button"
-            android:translationX="15dp"
+            android:textColor="#FFFFFF"
             app:cornerRadius="25dp" />
+        />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/questxt"
-        android:layout_width="0dp"
-        android:layout_height="92dp"
-        android:padding="15dp"
-        android:text="TextView"
-        android:textAlignment="viewStart"
-        android:textColor="#040303"
-        android:textSize="17sp"
-        android:textStyle="bold"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cdvw"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="2dp"
+        android:fadingEdgeLength="10dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="20dp"
+        app:cardMaxElevation="20dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayoutopn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.578"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1"
-        app:layout_constraintVertical_bias="0.754" />
+        app:layout_constraintTop_toBottomOf="@+id/textView1">
+
+        <TextView
+
+            android:id="@+id/questxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:padding="15dp"
+            android:text="TextView"
+            android:textAlignment="viewStart"
+            android:textColor="#FF7043"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
 
     <Button
         android:id="@+id/subans"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#081249"
+        android:backgroundTint="#FF7043"
         android:text="Submit"
         android:textColor="#F4F4F4"
         app:cornerRadius="10dp"
@@ -120,31 +139,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/questxt"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.968"
         app:layout_constraintStart_toEndOf="@+id/textView1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.141" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/crdview1"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="-10dp"
-        app:cardBackgroundColor="#CFCCCC"
-        app:cardCornerRadius="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/questxt"
-        app:layout_constraintEnd_toStartOf="@+id/textView2"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/textView1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.116">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/timmer" />
-    </androidx.cardview.widget.CardView>
+        app:layout_constraintVertical_bias="0.262" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
